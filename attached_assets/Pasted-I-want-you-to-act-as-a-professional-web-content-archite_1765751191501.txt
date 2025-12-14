@@ -1,0 +1,68 @@
+I want you to act as a professional web content architect, designer, and SEO specialist. Your task is to **retouch and fully load an informative hosting website**. The goal is to provide users with **all and more relevant information about web hosting, tutorials, guides, FAQs, and resources**, without changing the default AxiomHost prices. Use content inspired by **major hosting providers** (Hostinger.com, GoDaddy.com, Bluehost.com, SiteGround.com, HostGator.com, Namecheap.com) and **sirstevehq.com**. 
+
+The more pages the better — do not create lazy, simple scroll pages; **every page should be fully information-filled**.
+
+---
+
+**Instructions:**
+
+1. **Content Collection & Inspiration:**
+   - Gather all types of content from big hosting websites:  
+     * Hosting guides, tutorials, setup instructions  
+     * FAQs and troubleshooting resources  
+     * Knowledge base articles and educational blogs  
+     * Domain management and email setup guides  
+     * Security, backups, and website optimization tutorials  
+   - Gather relevant content from sirstevehq.com:  
+     * Services, About Us, contact info, case studies, client resources  
+   - Use this content as inspiration, **but rewrite in original, clear, beginner-friendly language**, optimized for SEO.
+
+2. **Content Integration:**
+   - Organize the website into **clear sections and pages**.
+   - Each page must include:  
+     * Header with navigation  
+     * Page title and meta tags (SEO-optimized)  
+     * Step-by-step tutorials or detailed explanations  
+     * FAQs if applicable  
+     * Tips, examples, and best practices  
+     * Sidebar linking to related articles  
+     * Footer with copyright and policy links
+   - Ensure **proper heading hierarchy**, alt texts for images, and internal linking.
+   - The website must have **no empty pages**; every link should open a fully informative page.
+
+3. **Pages / Sections to Include (at minimum):**
+   - Home (overview, guides, highlights)
+   - Web Hosting Tutorials
+   - VPS Hosting Guides
+   - Cloud Hosting Resources
+   - Reseller Hosting Guides
+   - WordPress Hosting Tutorials
+   - Domain & Email Management
+   - Website Security & Backups
+   - SEO & Performance Optimization
+   - Knowledge Base / FAQs
+   - About Us
+   - Contact Us
+   - Blog / Educational Resources
+   - Client Success Stories / Case Studies
+   - Any other relevant hosting info pages inspired by major hosting sites
+
+4. **Design & Layout:**
+   - Apple-like **minimalistic and clean design**  
+   - Responsive layout for **mobile, tablet, and desktop**  
+   - Modern typography and clear visual hierarchy  
+   - Highlight content sections with **cards, accordions for FAQs, step boxes for tutorials**
+
+5. **Output Requirements:**
+   - Generate **fully structured HTML pages** for each section, with content-filled articles  
+   - Include **meta titles, descriptions, and headings** for SEO  
+   - Include **placeholder images with descriptive alt text**  
+   - Sidebar navigation linking to other relevant articles  
+   - Footer with links to **terms, privacy policy, and contact info**  
+   - Ensure all links open a page with **fully written content, no placeholders**
+
+6. **Content Quality:**
+   - Original, clear, easy-to-read language  
+   - Grammar and spelling must be perfect  
+   - Include examples, screenshot descriptions, and tutorials  
+   - All content must be **informative, beginner-friendly, and authoritative**

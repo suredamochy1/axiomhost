@@ -49,6 +49,11 @@ import SoftwareLicenses from "@/pages/SoftwareLicenses";
 import DomainReseller from "@/pages/DomainReseller";
 import WhoisLookup from "@/pages/WhoisLookup";
 import SSLCertificates from "@/pages/SSLCertificates";
+import KnowledgeBase from "@/pages/KnowledgeBase";
+import WebHostingGuide from "@/pages/WebHostingGuide";
+import SecurityGuide from "@/pages/SecurityGuide";
+import SEOGuide from "@/pages/SEOGuide";
+import CpanelGuide from "@/pages/CpanelGuide";
 
 function Router() {
   return (
@@ -88,6 +93,12 @@ function Router() {
       <Route path="/domain-reseller" component={DomainReseller} />
       <Route path="/whois" component={WhoisLookup} />
       <Route path="/ssl-certificates" component={SSLCertificates} />
+      <Route path="/knowledge-base" component={KnowledgeBase} />
+      <Route path="/web-hosting-guide" component={WebHostingGuide} />
+      <Route path="/security-guide" component={SecurityGuide} />
+      <Route path="/seo-guide" component={SEOGuide} />
+      <Route path="/cpanel-guide" component={CpanelGuide} />
+      <Route path="/kb/:slug" component={KnowledgeBase} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route path="/faq" component={FAQ} />

@@ -1,0 +1,55 @@
+I want you to act as a professional web content architect and designer. Your task is to create a fully integrated website by gathering, compiling, and optimizing content from two sources: Hostinger.com and sirstevehq.com. The final website should be high-quality, SEO-optimized, visually appealing, and Apple-like in design (minimal, clean, and user-friendly).
+
+Instructions:
+
+1. Content Collection:
+   - Hostinger.com:
+     * Extract all relevant pages, including hosting plans, features, pricing, tutorials, support info.
+     * Collect FAQ sections, testimonials, blog posts, and educational resources.
+   - sirstevehq.com:
+     * Extract all relevant pages, including services, about us, contact info, and special offers.
+     * Collect FAQ sections, client reviews, case studies, and educational resources.
+
+2. Content Integration:
+   - Organize content into well-structured sections and pages.
+   - Ensure each page has proper SEO optimization:
+       * Meta title, description, and keywords
+       * Heading hierarchy (H1, H2, H3)
+       * Alt text for all images
+       * Internal linking between relevant pages
+   - Ensure content is accurate, up-to-date, and free from plagiarism.
+   - Maintain Apple-like design style: clean typography, minimal layouts, ample whitespace, and modern UI elements.
+
+3. Pages to Include:
+   - Home
+   - Hosting Plans
+   - VPS Hosting
+   - Reseller Hosting
+   - Cloud Hosting
+   - WordPress Hosting
+   - Domains (search, transfer, registration)
+   - Tutorials / Guides
+   - FAQs
+   - About Us
+   - Contact Us
+   - Blog / Educational Resources
+   - Testimonials / Reviews
+   - Special Offers / Promotions
+
+4. Design & Layout:
+   - Use responsive design principles for mobile, tablet, and desktop.
+   - Use modern, readable fonts and Apple-like typography.
+   - Clean, minimalistic navigation with consistent styling.
+   - Include buttons, cards, and sections styled in a professional, user-friendly manner.
+   - Ensure visual hierarchy highlights important content first.
+
+5. Final Output:
+   - Generate **fully structured HTML pages** for each page listed above, including:
+       * Header and navigation
+       * Footer with links and copyright
+       * SEO meta tags
+       * Integrated content from both sources
+   - Include all FAQs, tutorials, examples, and key information.
+   - Provide placeholder image tags with descriptive alt text.
+   - Use consistent, polished styling throughout all pages.
+   - Ensure all internal links between pages are functional.
