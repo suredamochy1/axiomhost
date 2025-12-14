@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#F4F5F7] text-[#1D1E2C] pt-16 pb-8 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           <div className="lg:col-span-2 pr-8">
             <a href="/" className="flex items-center gap-2 mb-6 cursor-pointer">
               <div className="text-[#673DE6] flex items-center gap-2">
@@ -53,6 +53,21 @@ export default function Footer() {
               <li><a href="#" className="text-[#545775] hover:text-[#673DE6] transition-colors">XYZ Domain</a></li>
               <li><a href="#" className="text-[#545775] hover:text-[#673DE6] transition-colors">Cheap Domain Names</a></li>
               <li><a href="#" className="text-[#545775] hover:text-[#673DE6] transition-colors">Domain Extensions</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-[#1D1E2C] font-bold mb-6">Guides & Resources</h4>
+            <ul className="space-y-3 text-sm">
+              <li><a href="/knowledge-base" className="text-[#545775] hover:text-[#673DE6] transition-colors">Knowledge Base</a></li>
+              <li><a href="/web-hosting-guide" className="text-[#545775] hover:text-[#673DE6] transition-colors">Web Hosting Guide</a></li>
+              <li><a href="/wordpress-guide" className="text-[#545775] hover:text-[#673DE6] transition-colors">WordPress Guide</a></li>
+              <li><a href="/cpanel-guide" className="text-[#545775] hover:text-[#673DE6] transition-colors">cPanel Tutorial</a></li>
+              <li><a href="/dns-guide" className="text-[#545775] hover:text-[#673DE6] transition-colors">DNS Management</a></li>
+              <li><a href="/security-guide" className="text-[#545775] hover:text-[#673DE6] transition-colors">Security Guide</a></li>
+              <li><a href="/seo-guide" className="text-[#545775] hover:text-[#673DE6] transition-colors">SEO & Performance</a></li>
+              <li><a href="/backups-guide" className="text-[#545775] hover:text-[#673DE6] transition-colors">Backups & Recovery</a></li>
+              <li><a href="/domain-email-guide" className="text-[#545775] hover:text-[#673DE6] transition-colors">Domain & Email Setup</a></li>
             </ul>
           </div>
 

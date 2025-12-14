@@ -65,9 +65,18 @@ export default function Navbar() {
   ] as MenuItem[];
 
   const supportMenu = [
-    { icon: "📚", name: "Knowledge Base", desc: "Advice and answers to all of your FAQs" },
-    { icon: "🎓", name: "Tutorials", desc: "Videos and articles to help you achieve your online success story" },
+    { icon: "📚", name: "Knowledge Base", desc: "Comprehensive hosting guides and FAQs" },
+    { icon: "🎓", name: "Tutorials", desc: "Videos and articles for your online success" },
     { icon: "💬", name: "Contact", desc: "How to reach us" },
+  ] as MenuItem[];
+
+  const guidesMenu = [
+    { icon: "🌐", name: "Web Hosting Guide", desc: "Complete beginner's guide to web hosting" },
+    { icon: "📝", name: "WordPress Guide", desc: "Everything about WordPress hosting" },
+    { icon: "⚙️", name: "cPanel Tutorial", desc: "Master your hosting control panel" },
+    { icon: "🔒", name: "Security Guide", desc: "Protect your website from threats" },
+    { icon: "🌍", name: "DNS Management", desc: "Manage domains and DNS records" },
+    { icon: "📊", name: "SEO & Performance", desc: "Optimize your site for search engines" },
   ] as MenuItem[];
 
   const MegaMenuLink = ({ item, hasBadge }: { item: MenuItem; hasBadge?: boolean }) => {
@@ -110,6 +119,18 @@ export default function Navbar() {
         setLocation("/about");
       } else if (item.name === "Client stories") {
         setLocation("/client-stories");
+      } else if (item.name === "Web Hosting Guide") {
+        setLocation("/web-hosting-guide");
+      } else if (item.name === "WordPress Guide") {
+        setLocation("/wordpress-guide");
+      } else if (item.name === "cPanel Tutorial") {
+        setLocation("/cpanel-guide");
+      } else if (item.name === "Security Guide") {
+        setLocation("/security-guide");
+      } else if (item.name === "DNS Management") {
+        setLocation("/dns-guide");
+      } else if (item.name === "SEO & Performance") {
+        setLocation("/seo-guide");
       }
       
       setActiveMenu(null);
@@ -361,11 +382,22 @@ export default function Navbar() {
                     >
                       <div className="shadow-2xl overflow-hidden" style={{ backdropFilter: 'blur(30px)', backgroundColor: 'rgba(240, 241, 245, 0.95)', borderTop: '1px solid rgba(255, 255, 255, 0.5)' }}>
                         <div className="max-w-7xl mx-auto px-12 py-16">
-                          <div className="grid grid-cols-2 gap-16">
-                            <div className="space-y-7">
-                              {supportMenu.map((item, i) => (
-                                <MegaMenuLink key={i} item={item} />
-                              ))}
+                          <div className="grid grid-cols-3 gap-16">
+                            <div>
+                              <h3 className="text-sm font-black uppercase tracking-widest text-slate-900 mb-8" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>Support</h3>
+                              <div className="space-y-7">
+                                {supportMenu.map((item, i) => (
+                                  <MegaMenuLink key={i} item={item} />
+                                ))}
+                              </div>
+                            </div>
+                            <div>
+                              <h3 className="text-sm font-black uppercase tracking-widest text-slate-900 mb-8" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>Guides</h3>
+                              <div className="space-y-7">
+                                {guidesMenu.map((item, i) => (
+                                  <MegaMenuLink key={i} item={item} />
+                                ))}
+                              </div>
                             </div>
                             <div className="bg-gradient-to-br from-slate-100 to-slate-200 rounded-2xl p-8 flex flex-col justify-between border border-slate-300" style={{ backdropFilter: 'blur(10px)' }}>
                               <div>
@@ -374,15 +406,15 @@ export default function Navbar() {
                                 <p className="text-base text-slate-600">A step-by-step guide to building and launching a website</p>
                               </div>
                               <a 
-                                href="/tutorials" 
+                                href="/web-hosting-guide" 
                                 onClick={(e) => {
                                   e.preventDefault();
-                                  setLocation("/tutorials");
+                                  setLocation("/web-hosting-guide");
                                   setActiveMenu(null);
                                 }}
                                 className="text-[#673DE6] font-semibold text-base mt-6 inline-flex items-center gap-1 hover:gap-2 transition-all cursor-pointer"
                               >
-                                How to make a website <ArrowUpRight size={18} />
+                                Read the beginner's guide <ArrowUpRight size={18} />
                               </a>
                             </div>
                           </div>
