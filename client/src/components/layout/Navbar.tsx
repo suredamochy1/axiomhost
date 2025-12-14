@@ -106,7 +106,7 @@ export default function Navbar() {
       } else if (item.name === "Premium VPN Services") {
         setLocation("/premium-vpn");
       } else if (item.name === "Knowledge Base") {
-        setLocation("/help");
+        setLocation("/knowledge-base");
       } else if (item.name === "Tutorials") {
         setLocation("/tutorials");
       } else if (item.name === "Contact") {
@@ -691,7 +691,7 @@ export default function Navbar() {
                           onClick={(e) => {
                             e.preventDefault();
                             setMobileOpen(false);
-                            if (item.name === "Knowledge Base") setLocation("/help");
+                            if (item.name === "Knowledge Base") setLocation("/knowledge-base");
                             else if (item.name === "Tutorials") setLocation("/tutorials");
                             else if (item.name === "Contact") setLocation("/contact");
                           }}
