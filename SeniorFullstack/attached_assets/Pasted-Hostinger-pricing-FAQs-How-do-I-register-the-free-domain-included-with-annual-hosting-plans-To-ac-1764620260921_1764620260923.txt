@@ -1,0 +1,21 @@
+Hostinger pricing FAQs
+How do I register the free domain included with annual hosting plans?
+To activate the free 12-month domain name included with every annual managed hosting for WordPress, cloud hosting, or Website Builder plan, simply log in to your dashboard, click on the Claim domain button, find your perfect domain, and register it.
+
+How do I activate the free SSL certificate?
+You don’t need to do anything. We automatically set up your SSL certificate when you sign up, so you can sit back and relax, safe in the knowledge your site is secure.
+
+Can I change my plan, if my circumstances change?
+Yes, you can easily upgrade your plan if your circumstances change. Our scalable options allow you to seamlessly switch without any downtime.
+
+Why do different plans cost different amounts?
+While all our web hosting plans include everything you need to get your website online, alongside performance and security you can rely on, each plan is tailored to suit different needs. For example, an individual’s professional portfolio website doesn’t require the same ecommerce resources that a medium-sized retailer would need for their online store, or a developer might need to host a dedicated online game server. By offering a variety of plans, we can ensure you only pay for the features and resources you need.
+
+Does Hostinger offer ecommerce hosting?
+Yes, we offer a variety of ecommerce plans that include everything you need to open your online store and start selling. All our ecommerce plans include inventory management, multiple payment methods, marketing integrations, client appointment scheduling, and 0% transaction fees, so you keep more of what you make.
+
+Can I migrate existing websites to Hostinger?
+Yes, you can quickly and easily migrate your existing website to Hostinger - and it’s free. We offer an unlimited website migrations service that handles everything and ensures you can transfer your site - or sites - without any hassle, cost, data loss, or downtime.
+
+I have a domain name at a different company. Can I transfer it to Hostinger?
+Absolutely. You can transfer your domain name to Hostinger by following our simple domain transfer process. Then you can manage your domain and hosting services all in one place.

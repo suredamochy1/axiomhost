@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installing Free SSL Certificate with Let's Encrypt - AxiomHost Help Center</title>
+    <meta name="description" content="Step-by-step guide to install free SSL certificate on your website using Let's Encrypt in cPanel. Enable HTTPS and secure your website in minutes.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: #ffffff;
+        }
+        
+        .header {
+            background: #000000;
+            border-bottom: 1px solid #1e293b;
+            padding: 1.25rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #EC1C65;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav a:hover {
+            color: #EC1C65;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3rem;
+        }
+        
+        .main-content {
+            min-width: 0;
+        }
+        
+        .breadcrumb {
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .breadcrumb a {
+            color: #673DE6;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .article-header {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .category-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #673DE6 0%, #EC1C65 100%);
+            color: white;
+            padding: 0.375rem 0.875rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .article-meta {
+            display: flex;
+            gap: 2rem;
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+        
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .content h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .content p {
+            margin-bottom: 1.25rem;
+            color: #475569;
+            font-size: 1.0625rem;
+        }
+        
+        .content ol, .content ul {
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+        }
+        
+        .content li {
+            margin-bottom: 0.75rem;
+            color: #475569;
+            line-height: 1.7;
+        }
+        
+        .content li strong {
+            color: #0f172a;
+        }
+        
+        pre {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+        
+        code {
+            background: #f1f5f9;
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.25rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #673DE6;
+        }
+        
+        .tip-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-left: 4px solid #10b981;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .tip-box strong {
+            color: #047857;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .warning-box strong {
+            color: #d97706;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-left: 4px solid #3b82f6;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .info-box strong {
+            color: #1d4ed8;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .success-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #d1fae5 100%);
+            border-left: 4px solid #10b981;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .success-box strong {
+            color: #047857;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .sidebar {
+            position: sticky;
+            top: 6rem;
+            height: fit-content;
+        }
+        
+        .sidebar-section {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .sidebar-section h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+        
+        .sidebar-section ul {
+            list-style: none;
+        }
+        
+        .sidebar-section li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .sidebar-section a {
+            color: #673DE6;
+            text-decoration: none;
+            font-size: 0.9375rem;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            transition: all 0.2s;
+        }
+        
+        .sidebar-section a:hover {
+            background: #ede9fe;
+            color: #5B21B6;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #673DE6 0%, #5B21B6 100%);
+            color: white;
+            padding: 0.875rem 1.75rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 3rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(103, 61, 230, 0.3);
+        }
+        
+        .footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+        
+        .footer-links a:hover {
+            color: #EC1C65;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: static;
+            }
+            
+            h1 {
+                font-size: 1.875rem;
+            }
+            
+            .nav {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="/" class="logo">AXIOM<span>HOST</span></a>
+            <nav class="nav">
+                <a href="/pricing">Pricing</a>
+                <a href="/help">Help Center</a>
+                <a href="/dashboard">My Account</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="main-content">
+            <div class="breadcrumb">
+                <a href="/help">Help Center</a> / <a href="/help#security">Security</a> / Installing SSL Certificate
+            </div>
+
+            <article>
+                <div class="article-header">
+                    <span class="category-badge">Security</span>
+                    <h1>Installing Free SSL Certificate with Let's Encrypt</h1>
+                    <div class="article-meta">
+                        <span>📖 6 min read</span>
+                        <span>👁️ 24.7k views</span>
+                        <span>📅 Updated Dec 2025</span>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <p>SSL (Secure Sockets Layer) certificates encrypt the connection between your website and your visitors, protecting sensitive information like passwords, credit card details, and personal data. SSL is essential for every modern website, and Google even uses HTTPS as a ranking factor.</p>
+
+                    <p>This guide will show you how to install a free SSL certificate using Let's Encrypt through cPanel's built-in SSL/TLS manager.</p>
+
+                    <h2>Why You Need SSL Certificate</h2>
+                    <ul>
+                        <li><strong>Security:</strong> Encrypts data transmission between server and browser</li>
+                        <li><strong>Trust:</strong> Shows padlock icon and "Secure" label in browser</li>
+                        <li><strong>SEO Boost:</strong> Google favors HTTPS websites in search rankings</li>
+                        <li><strong>Compliance:</strong> Required for e-commerce and payment processing</li>
+                        <li><strong>Browser Warnings:</strong> Avoid "Not Secure" warnings in modern browsers</li>
+                        <li><strong>Customer Confidence:</strong> Visitors trust secure websites more</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <strong>🔒 What is Let's Encrypt?</strong>
+                        Let's Encrypt is a free, automated, and open Certificate Authority (CA) that provides SSL certificates trusted by all major browsers. Certificates are valid for 90 days and auto-renew automatically.
+                    </div>
+
+                    <h2>Prerequisites</h2>
+                    <ul>
+                        <li>Active AxiomHost hosting account</li>
+                        <li>Domain name pointed to your hosting (DNS propagation complete)</li>
+                        <li>cPanel login credentials</li>
+                        <li>Your website must be accessible via HTTP first</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <strong>⚠️ Important:</strong>
+                        Make sure your domain DNS is fully propagated and pointing to AxiomHost servers before installing SSL. Use <a href="https://dnschecker.org" target="_blank">DNS Checker</a> to verify propagation.
+                    </div>
+
+                    <h2>Step-by-Step: Installing SSL Certificate</h2>
+
+                    <h3>Step 1: Access cPanel SSL/TLS Manager</h3>
+                    <ol>
+                        <li>Log into your cPanel at <code>yourdomain.com/cpanel</code></li>
+                        <li>Scroll down to the <strong>Security</strong> section</li>
+                        <li>Click on <strong>SSL/TLS Status</strong></li>
+                    </ol>
+
+                    <div class="tip-box">
+                        <strong>💡 Alternative Method:</strong>
+                        You can also click on "Let's Encrypt SSL" directly if available in your cPanel interface for a streamlined installation process.
+                    </div>
+
+                    <h3>Step 2: Select Domains for SSL</h3>
+                    <ol>
+                        <li>You'll see a list of all domains and subdomains in your account</li>
+                        <li>Check the boxes next to domains you want to secure with SSL</li>
+                        <li>Recommended: Select both <code>yourdomain.com</code> and <code>www.yourdomain.com</code></li>
+                    </ol>
+
+                    <div class="info-box">
+                        <strong>📌 Domain Selection Tips:</strong>
+                        <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+                            <li>Select your main domain AND www subdomain</li>
+                            <li>Select mail.yourdomain.com for webmail SSL</li>
+                            <li>Select any subdomains you actively use</li>
+                            <li>You can install SSL for multiple domains at once</li>
+                        </ul>
+                    </div>
+
+                    <h3>Step 3: Install SSL Certificate</h3>
+                    <ol>
+                        <li>After selecting domains, click <strong>Run AutoSSL</strong> button</li>
+                        <li>cPanel will automatically:
+                            <ul>
+                                <li>Request SSL certificate from Let's Encrypt</li>
+                                <li>Verify domain ownership</li>
+                                <li>Install the certificate</li>
+                                <li>Configure auto-renewal</li>
+                            </ul>
+                        </li>
+                        <li>Wait 1-2 minutes for the process to complete</li>
+                    </ol>
+
+                    <div class="tip-box">
+                        <strong>💡 Installation Time:</strong>
+                        SSL installation typically takes 1-2 minutes. If it takes longer than 5 minutes, refresh the page and check the status.
+                    </div>
+
+                    <h3>Step 4: Verify SSL Installation</h3>
+                    <ol>
+                        <li>Once complete, you'll see <strong>"SSL certificate successfully installed"</strong> message</li>
+                        <li>The status will change to a green checkmark with "AutoSSL" label</li>
+                        <li>Visit your website using <code>https://yourdomain.com</code></li>
+                        <li>Look for the padlock icon 🔒 in the address bar</li>
+                    </ol>
+
+                    <div class="success-box">
+                        <strong>✅ Success Indicators:</strong>
+                        <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+                            <li>Padlock icon appears in browser address bar</li>
+                            <li>"Connection is secure" when clicking padlock</li>
+                            <li>HTTPS in the URL instead of HTTP</li>
+                            <li>No browser security warnings</li>
+                        </ul>
+                    </div>
+
+                    <h2>Step 5: Force HTTPS (Redirect HTTP to HTTPS)</h2>
+                    <p>After installing SSL, force all traffic to use HTTPS to ensure maximum security.</p>
+
+                    <h3>Method 1: Using cPanel (Easiest)</h3>
+                    <ol>
+                        <li>In cPanel, go to <strong>Domains</strong> section</li>
+                        <li>Click <strong>Domains</strong></li>
+                        <li>Find your domain and toggle <strong>Force HTTPS Redirect</strong> to ON</li>
+                        <li>Click <strong>Save</strong></li>
+                    </ol>
+
+                    <h3>Method 2: Using .htaccess (Advanced)</h3>
+                    <p>Add this code to your <code>.htaccess</code> file in the root directory:</p>
+
+                    <pre>RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]</pre>
+
+                    <div class="tip-box">
+                        <strong>💡 Recommended:</strong>
+                        Use Method 1 (cPanel toggle) as it's simpler and less prone to errors. Only use .htaccess if you need advanced configuration.
+                    </div>
+
+                    <h3>Method 3: Force HTTPS in WordPress</h3>
+                    <p>If you're running WordPress, update your site URL:</p>
+                    <ol>
+                        <li>Log into WordPress admin panel</li>
+                        <li>Go to <strong>Settings > General</strong></li>
+                        <li>Change both URLs from <code>http://</code> to <code>https://</code>:
+                            <ul>
+                                <li>WordPress Address (URL)</li>
+                                <li>Site Address (URL)</li>
+                            </ul>
+                        </li>
+                        <li>Click <strong>Save Changes</strong></li>
+                        <li>You'll be logged out - log back in using HTTPS</li>
+                    </ol>
+
+                    <div class="warning-box">
+                        <strong>⚠️ WordPress Warning:</strong>
+                        Make sure SSL is properly installed before changing WordPress URLs. Changing to HTTPS without a valid certificate will lock you out of your site.
+                    </div>
+
+                    <h2>Automatic SSL Renewal</h2>
+                    <p>Let's Encrypt certificates are valid for 90 days. AxiomHost's cPanel automatically renews SSL certificates before expiration.</p>
+
+                    <h3>How Auto-Renewal Works</h3>
+                    <ul>
+                        <li>AutoSSL runs daily at midnight server time</li>
+                        <li>Checks all certificates expiring within 30 days</li>
+                        <li>Automatically renews expiring certificates</li>
+                        <li>No manual intervention required</li>
+                        <li>Email notification sent if renewal fails</li>
+                    </ul>
+
+                    <div class="tip-box">
+                        <strong>💡 Peace of Mind:</strong>
+                        You don't need to worry about SSL expiration. Our system handles renewals automatically, ensuring your site stays secure 24/7.
+                    </div>
+
+                    <h2>Verifying SSL Certificate Details</h2>
+                    <p>To view your SSL certificate information:</p>
+                    <ol>
+                        <li>Visit your website via HTTPS</li>
+                        <li>Click the padlock icon in the address bar</li>
+                        <li>Click <strong>Certificate</strong> or <strong>Certificate is valid</strong></li>
+                        <li>View certificate details:
+                            <ul>
+                                <li>Issued to: yourdomain.com</li>
+                                <li>Issued by: Let's Encrypt</li>
+                                <li>Valid from: Issue date</li>
+                                <li>Valid to: Expiration date (90 days)</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h2>Troubleshooting Common SSL Issues</h2>
+
+                    <h3>Issue: "Not Secure" Warning Still Showing</h3>
+                    <p><strong>Causes and Solutions:</strong></p>
+                    <ul>
+                        <li><strong>Mixed Content:</strong> Some resources loading via HTTP
+                            <ul>
+                                <li><em>Solution:</em> Update all links to use HTTPS or relative URLs</li>
+                                <li>Check browser console (F12) for mixed content warnings</li>
+                            </ul>
+                        </li>
+                        <li><strong>Browser Cache:</strong> Old HTTP version cached
+                            <ul>
+                                <li><em>Solution:</em> Clear browser cache and hard refresh (Ctrl+Shift+R)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Wrong URL:</strong> Accessing HTTP instead of HTTPS
+                            <ul>
+                                <li><em>Solution:</em> Type https:// manually or force HTTPS redirect</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>Issue: AutoSSL Failed</h3>
+                    <p><strong>Common Reasons:</strong></p>
+                    <ul>
+                        <li>DNS not pointing to AxiomHost</li>
+                        <li>Domain not accessible via HTTP</li>
+                        <li>.htaccess blocking Let's Encrypt validation</li>
+                        <li>Cloudflare or other proxy in the way</li>
+                    </ul>
+
+                    <p><strong>Solutions:</strong></p>
+                    <ol>
+                        <li>Verify DNS is correctly pointed to AxiomHost nameservers</li>
+                        <li>Temporarily disable .htaccess password protection</li>
+                        <li>If using Cloudflare, set SSL mode to "Full" not "Flexible"</li>
+                        <li>Contact AxiomHost support for manual installation</li>
+                    </ol>
+
+                    <h3>Issue: SSL Certificate Expired</h3>
+                    <p><strong>This should never happen with AutoSSL, but if it does:</strong></p>
+                    <ol>
+                        <li>Go to cPanel > SSL/TLS Status</li>
+                        <li>Select the domain with expired certificate</li>
+                        <li>Click <strong>Run AutoSSL</strong> to request new certificate</li>
+                        <li>If problem persists, contact AxiomHost support</li>
+                    </ol>
+
+                    <h3>Issue: Wildcard SSL Needed</h3>
+                    <p>Free Let's Encrypt SSL covers your domain and www subdomain. For unlimited subdomains:</p>
+                    <ul>
+                        <li>Contact AxiomHost support for wildcard SSL installation</li>
+                        <li>Or purchase commercial wildcard SSL certificate</li>
+                        <li>Wildcard format: *.yourdomain.com</li>
+                    </ul>
+
+                    <h2>SSL Best Practices</h2>
+
+                    <h3>Security</h3>
+                    <ul>
+                        <li>Always force HTTPS redirect for all pages</li>
+                        <li>Enable HSTS (HTTP Strict Transport Security)</li>
+                        <li>Use strong TLS protocols (TLS 1.2 and 1.3)</li>
+                        <li>Regularly scan for mixed content issues</li>
+                        <li>Keep WordPress/CMS updated to support latest SSL standards</li>
+                    </ul>
+
+                    <h3>Performance</h3>
+                    <ul>
+                        <li>SSL adds minimal overhead to page load</li>
+                        <li>HTTP/2 requires HTTPS and improves performance</li>
+                        <li>Use CDN with SSL support for global speed</li>
+                        <li>Enable OCSP stapling for faster certificate validation</li>
+                    </ul>
+
+                    <h3>Maintenance</h3>
+                    <ul>
+                        <li>Monitor SSL certificate expiration dates</li>
+                        <li>Check AutoSSL logs regularly in cPanel</li>
+                        <li>Test SSL configuration using <a href="https://www.ssllabs.com/ssltest/" target="_blank">SSL Labs</a></li>
+                        <li>Keep admin email updated for renewal notifications</li>
+                    </ul>
+
+                    <h2>Testing Your SSL Installation</h2>
+
+                    <h3>Manual Browser Test</h3>
+                    <ol>
+                        <li>Visit <code>https://yourdomain.com</code></li>
+                        <li>Look for padlock icon in address bar</li>
+                        <li>Click padlock and verify certificate is valid</li>
+                        <li>Check for any mixed content warnings in browser console (F12)</li>
+                    </ol>
+
+                    <h3>Online SSL Checker</h3>
+                    <p>Use these free tools to verify your SSL setup:</p>
+                    <ul>
+                        <li><strong>SSL Labs:</strong> <a href="https://www.ssllabs.com/ssltest/" target="_blank">https://www.ssllabs.com/ssltest/</a>
+                            <ul>
+                                <li>Comprehensive SSL/TLS analysis</li>
+                                <li>Grades your SSL configuration (aim for A+)</li>
+                                <li>Identifies security vulnerabilities</li>
+                            </ul>
+                        </li>
+                        <li><strong>Why No Padlock:</strong> <a href="https://www.whynopadlock.com/" target="_blank">https://www.whynopadlock.com/</a>
+                            <ul>
+                                <li>Finds mixed content issues</li>
+                                <li>Shows which resources are insecure</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h2>Next Steps After SSL Installation</h2>
+                    <ul>
+                        <li><a href="/help-articles/force-https.html">Configure HTTPS redirect and HSTS</a></li>
+                        <li><a href="/help-articles/fix-mixed-content.html">Fix mixed content errors</a></li>
+                        <li><a href="/help-articles/cloudflare-ssl.html">Use Cloudflare with SSL for extra protection</a></li>
+                        <li>Submit your HTTPS site to Google Search Console</li>
+                        <li>Update social media links to HTTPS version</li>
+                    </ul>
+
+                    <div class="tip-box">
+                        <strong>💡 Need Help with SSL?</strong>
+                        Our expert support team is available 24/7 to help with SSL installation and troubleshooting. Contact us via live chat or call +234-701-934-3754.
+                    </div>
+
+                    <a href="/help" class="back-button">← Back to Help Center</a>
+                </div>
+            </article>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>Related Articles</h3>
+                <ul>
+                    <li><a href="/help-articles/force-https.html">Forcing HTTPS and Redirecting Traffic to SSL</a></li>
+                    <li><a href="/help-articles/fix-mixed-content.html">Fixing Mixed Content Errors</a></li>
+                    <li><a href="/help-articles/wildcard-ssl.html">Wildcard SSL for Subdomains</a></li>
+                    <li><a href="/help-articles/ssl-renewal.html">SSL Certificate Renewal & Maintenance</a></li>
+                    <li><a href="/help-articles/wordpress-ssl.html">SSL Setup for WordPress Sites</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Security Topics</h3>
+                <ul>
+                    <li><a href="/help-articles/wordpress-security.html">WordPress Security Hardening</a></li>
+                    <li><a href="/help-articles/two-factor-authentication.html">Two-Factor Authentication Setup</a></li>
+                    <li><a href="/help-articles/firewall-setup.html">Web Application Firewall Setup</a></li>
+                    <li><a href="/help-articles/password-security.html">Password Security Best Practices</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Get Support</h3>
+                <ul>
+                    <li><a href="/contact">Contact Support Team</a></li>
+                    <li><a href="/tutorials">Video Tutorials</a></li>
+                    <li><a href="/faq">Frequently Asked Questions</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/about">About Us</a>
+                <a href="/contact">Contact</a>
+            </div>
+            <p>&copy; 2025 AxiomHost. All rights reserved. Powered by renewable energy.</p>
+        </div>
+    </footer>
+</body>
+</html>

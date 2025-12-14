@@ -1,0 +1,79 @@
+Act as a Senior Full Stack Developer and UI/UX Expert specializing in high-conversion SaaS platforms.
+
+Project: Build a comprehensive web hosting platform frontend called "Axiomhost.cloud".
+
+Goal: Create a high-performance, single-page application (SPA) that visually rivals Hostinger and DigitalOcean. The code must be optimized for SEO and AI Search Engines (structured data, semantic HTML) while maintaining an effortless user experience.
+
+1. Visual Identity & Style Guide:
+
+    Vibe: Professional, trustworthy, tech-forward, and extremely clean.
+
+    Color Palette (Strict Adherence):
+
+        Primary: #673DE6 (Deep Purple - Brand Identity)
+
+        Secondary: #00D4AA (Teal - Highlights/Accents)
+
+        Background: #F8FAFC (Light Grey - Main Interface)
+
+        Surface: #FFFFFF (White - Cards/Modals)
+
+        Text: #1E293B (Slate - Main Content)
+
+        CTA/Accent: #3B82F6 (Blue - Buttons/Links)
+
+        Success: #10B981 (Green - Status Indicators)
+
+    Typography: Inter or System UI fonts. Clean, legible, 20px base spacing.
+
+    UI Components: Rounded corners (12px), soft drop shadows for depth, glassmorphism effects on the navbar.
+
+2. SEO & AI Search Optimization Strategy:
+
+    Semantic HTML: Use proper <header>, <main>, <article>, <section>, and <aside> tags to help AI bots understand the page structure.
+
+    Schema Markup (JSON-LD): Implement Product schema for the hosting plans so AI search engines can display pricing directly in search results.
+
+    Meta Tags: Ensure dynamic titles and descriptions for "Cloud Hosting", "VPS", and "Domain Registration".
+
+    Accessibility: Full ARIA label support (AI search engines prioritize accessible sites).
+
+3. Core Architecture & Views:
+
+A. Public Landing Page (Conversion Focused):
+
+    Hero Section: High impact, large heading "Hosting at the Speed of Thought", subtext, and dual CTAs (Get Started / View Pricing).
+
+    Pricing Table: Three-tier cards (Shared, Cloud, VPS). The "Cloud" plan should be highlighted as "Most Popular" with a glowing border effect using the Primary color.
+
+    Features Grid: 3x3 grid showing speed, security, and support icons.
+
+B. Client Dashboard (The "Logged In" View):
+
+    Sidebar Navigation: Dashboard, Services, Domains, Emails, Billing, Support.
+
+    Main Overview:
+
+        Active Services Widget: Shows "Premium Shared Hosting" - Status: Active.
+
+        Server Status: Visual gauge showing CPU, RAM, and Disk usage.
+
+        Recent Invoices: A clean data table.
+
+C. File Manager (Visual Reference):
+
+    A simplified, folder-based view similar to Windows Explorer/Finder but web-based.
+
+    Icons for different file types (PHP, HTML, JPG).
+
+    Breadcrumb navigation (e.g., home / public_html / wp-content).
+
+4. Technical Requirements:
+
+    Framework: React + Tailwind CSS (Use lucide-react for icons).
+
+    Responsiveness: Mobile-first design. The sidebar must collapse into a hamburger menu on mobile.
+
+    Interactivity: Smooth transitions on hover states. Buttons should have active press states.
+
+    No Complications: Keep the code modular. Do not over-engineer the backend; mock the data for the frontend display to ensure the UI is perfect first.

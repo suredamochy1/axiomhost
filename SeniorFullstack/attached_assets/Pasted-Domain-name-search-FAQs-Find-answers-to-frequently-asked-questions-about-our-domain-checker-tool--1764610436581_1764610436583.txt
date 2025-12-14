@@ -1,0 +1,102 @@
+Domain name search FAQs
+Find answers to frequently asked questions about our domain checker tool.
+What is a domain name?
+A domain name, or simply domain, is similar to a home address in real life. It’s how people find your site online – they enter the domain in a web browser or search engine.
+
+Hostinger.com is a domain, just like Google.com and Facebook.com. Ideally, a domain should be registered under the same name as the brand it’s representing.
+
+Curious about domain names? Read our beginner’s guide: What is a domain name?
+
+Why do I need to buy a domain name?
+It’s important to buy domain names to help potential visitors find your site. Without assigned website names, we would only be able to access them by entering their IP address, which is more difficult to remember.
+
+To find a good name while performing a domain search, you can include keywords or brand names.
+
+What is a subdomain, and how does it work?
+A subdomain is a part of your website that lives under your main domain, like blog.yoursite.com. It helps you create separate sections for things like a blog, store, or help page without needing a new domain.
+
+How to pick the right website name?
+The best practices for buying domain names include the following:
+
+Keep it short. Two to three words is ideal.
+Keep it simple. Avoid long or complex words.
+Use keywords. Include a keyword from your niche. For example, if you sell coffee beans in Seattle, try Seattlecoffeebeans.com.
+Avoid numbers. Numbers can be confusing and harder to remember.
+Use your brand name. Buy a domain name that includes your brand for maximum recognition.
+Need help? Check out our easy guide for tips on choosing the right domain name.
+
+Once you have an idea, enter it into our domain search tool to check if it’s available.
+
+Once I register a domain, can I change it later?
+No, you cannot change a domain name once it’s registered. However, you can register a new one and redirect your website to it. This means when someone visits your old domain, they’ll be sent to the new one automatically.
+
+Check out our step-by-step guide on how to redirect a domain.
+
+How long does a domain name registration last?
+The minimum registration period for domain names is one year. With Hostinger, you can also register .com, .net, .org, and other domains for up to three years. Some domains, like .ai, require a minimum of two years.
+
+To keep your website online without interruption, we recommend enabling automatic renewal.
+
+What are the requirements to buy domain names at Hostinger?
+It’s free to check domain availability and there are no special requirements for buying a domain name. We only require basic contact information and a valid payment method.
+
+You can also buy domains with us and point them to another hosting provider.
+
+I already purchased a domain name. Can I transfer it to Hostinger?
+Yes. When you buy a domain, it belongs to you – and not the domain registrar.
+
+It’s easy to use our domain transfer service to switch to Hostinger. We’ll walk you through every step of the process.
+
+What are TLDs, ccTLDs, and gTLDs?
+TLD stands for top-level domain. This is the final component of a domain, like .com.
+
+ccTLD stands for country-code top-level domain. This is a subcategory of TLDs used to identify a particular country – for example, .co.uk, .de, .mx, and .fr are all ccTLDs.
+
+gTLD stands for generic top-level domain. gTLDs are the most common type of domain name, in part because this category includes .com domains, which have more registrations than all ccTLDs combined.
+
+Historically, the main gTLDs were .com, .org, .net, .edu, .gov, and .mil, but the number of available domain extensions has been expanded with the addition of TLDs like .online, .xyz, and .name.
+
+How long does it take to register a domain name?
+Hostinger offers instant activation, so you can be sure that your desired domain name will be ready to use right away.
+
+We’ve made the process as quick as possible – it only takes a couple of minutes to go from checking domain name availability with our domain finder to successfully registering it.
+
+How do I get a free domain?
+Hostinger offers the best way to get a great domain for free. You just need to sign up for a Premium or Business web hosting plan for 12 months or more, and you’ll get a free domain registration for one year. This offer also applies to our annual Business Premium email hosting plan.
+
+Learn how to claim your free domain.
+
+Can I sell my domain name?
+Yes, you can sell your domain name. It usually involves listing it on a marketplace, setting a price, and transferring ownership once it’s sold.
+
+Check out our guide on how to sell a domain name for more information.
+
+What if the website name is unavailable on the domain checker?
+If the website name has already been registered, you can try another extension. Often, the most popular extensions are already taken, but country-specific extensions such as .co.uk, or less common ones like .xyz or .online might still be available. Our domain search tool will also suggest other great available options.
+
+What is privacy protection?
+Domain privacy protection is sometimes called RDAP (previously known as WHOIS) protection because it hides certain information about a domain name’s owner that would otherwise be discoverable through a public RDAP lookup.
+
+Privacy protection lets the domain registrar replace your name, address, phone number, email address, and business name with a set of generic, non-identifiable information.
+
+What’s the difference between .com, .net, .org, and .info?
+Each gTLD carries a slightly different meaning, so it’s usually best to pick one that’s most relevant to your website.
+
+Domain names ending in .com are commonly used for commercial purposes, although they’re considered the default option as they imply a certain amount of trust. .net domains were originally used by networking companies, such as internet service providers, but are now multipurpose.
+
+Domains ending in .org are still largely used as originally intended – as the gTLD for charities, communities, and local organizations. Meanwhile, .info is aimed at information-based websites such as wikis and tutorial sites.
+
+With all of these gTLDs, there's a certain amount of wiggle room. There’s no rule saying you have to use one type of TLD or another. Think of the above information as guidelines when purchasing a domain name that is most relevant to your website.
+
+What else can I do with a domain name besides building a website?
+Besides building a website, you can use your domain to create a professional email address, like name@surname.com, which looks more credible than a generic one. You can also set up domain forwarding to redirect visitors to your social media profiles, like Instagram, Linkedin, Facebook, or any other page you want people to find easily.
+
+What’s the difference between a domain name and web hosting?
+Think of your domain name as your home address and web hosting as the physical structure, like a house. A domain can help people find your site; hosting is the online space to store your website data. To publish a website, you'll need to buy domain and hosting services so that visitors have an easier time finding your site on the internet.
+
+While it’s technically possible to have one without the other, they work best together. This is why many hosting companies offer domain names and many domain registrars offer hosting services.
+
+Want to learn more? Check out our full guide on the differences between domain names and hosting.
+
+What are premium domain names and why are they more expensive?
+Premium domain names are high-value domains that are short, easy to remember, or include popular keywords (like media.tech or store.online). Due to their market value, they cost more upfront and often have higher renewal fees.

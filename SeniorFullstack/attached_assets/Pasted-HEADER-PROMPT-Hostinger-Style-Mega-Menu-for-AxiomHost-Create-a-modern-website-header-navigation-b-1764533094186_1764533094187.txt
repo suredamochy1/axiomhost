@@ -1,0 +1,203 @@
+HEADER PROMPT (Hostinger-Style Mega Menu for AxiomHost)
+
+Create a modern website header/navigation bar inspired by Hostinger, with clean mega-menus and dropdown arrows.
+Use AxiomHost branding and the following top-level menu items:
+
+Pricing
+
+Services
+
+Explore
+
+Support
+
+Self-hosted n8n (single link, no dropdown unless necessary)
+
+🔻 PRICING — Mega Menu Content
+
+Hosting
+
+Web Hosting
+
+WordPress Hosting
+
+VPS Hosting
+
+Cloud Hosting
+
+WooCommerce Hosting
+
+Agency Hosting
+
+Game Server Hosting (e.g., Minecraft)
+
+Business Email Hosting
+
+Google Workspace
+
+Domains
+
+Domain Search
+
+Cheap Domains
+
+Free Domain
+
+Domain Transfer
+
+Domain Extensions
+
+WHOIS Lookup
+
+Free SSL Certificate
+
+Tools & Builders
+
+Website Builder
+
+AI Website Builder
+
+Ecommerce Store Builder
+
+Link-in-Bio Tool
+
+Business Name Generator
+
+Logo Creator
+
+Free Migration Tool
+
+Public API
+
+Information
+
+Full Pricing Overview
+
+Customer Reviews
+
+Affiliate Program
+
+Referral Program
+
+Roadmap
+
+System Status
+
+Sitemap
+
+🔻 SERVICES — Mega Menu Content
+
+Hosting & Compute
+
+Shared Web Hosting
+
+Managed WordPress Hosting
+
+Cloud Hosting
+
+VPS Hosting
+
+Site & Store Building
+
+Website Builder
+
+AI Website Builder
+
+Ecommerce Builder
+
+Funnel/Landing Page Builder
+
+Email & Business Tools
+
+Business Email
+
+Email Marketing Suite
+
+Google Workspace
+
+Migration & Add-ons
+
+Free Website Migration
+
+Domain Transfer
+
+Performance Optimization
+
+Website Security & Malware Cleanup
+
+🔻 EXPLORE — Mega Menu Content
+
+Content & Resources
+
+Blog
+
+Tutorials
+
+“How to Create a Website” Guide
+
+Product Features Overview
+
+Company
+
+About AxiomHost
+
+Mission & Vision
+
+Team & Culture
+
+Community & Social Proof
+
+Customer Stories
+
+Case Studies
+
+Partners & Integrations
+
+Promotions
+
+Deals & Discounts
+
+🔻 SUPPORT — Mega Menu Content
+
+Help Center
+
+Knowledge Base
+
+Tutorials
+
+Getting Started Guides
+
+Get Help
+
+Contact Support
+
+Live Chat (if available)
+
+Sales Enquiries
+
+Tools
+
+System Status Page
+
+🔻 SELF-HOSTED n8n (Top Nav Single Link)
+
+Link directly to the AxiomHost n8n product page or overview of self-hosted n8n workflows.
+(If a dropdown is needed, include Overview, Pricing, Templates, Setup, VPS Integration.)
+
+🔧 Design Requirements
+
+Hostinger-style clean layout
+
+Soft gradients, thin borders, subtle shadows
+
+Dropdowns with grouped headings and icons
+
+Modern, minimal typography (Inter)
+
+Hover effects on links
+
+Sticky header
+
+Responsive mobile menu with collapsible accordion
+
+Smooth animations for dropdown opening

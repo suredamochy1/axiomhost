@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Professional Email with Your Domain - AxiomHost Help Center</title>
+    <meta name="description" content="Learn how to create professional email addresses using your domain name in cPanel. Step-by-step guide for setting up business email.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: #ffffff;
+        }
+        
+        .header {
+            background: #000000;
+            border-bottom: 1px solid #1e293b;
+            padding: 1.25rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #EC1C65;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav a:hover {
+            color: #EC1C65;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3rem;
+        }
+        
+        .main-content {
+            min-width: 0;
+        }
+        
+        .breadcrumb {
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .breadcrumb a {
+            color: #673DE6;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .article-header {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .category-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #673DE6 0%, #EC1C65 100%);
+            color: white;
+            padding: 0.375rem 0.875rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .article-meta {
+            display: flex;
+            gap: 2rem;
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+        
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .content h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .content p {
+            margin-bottom: 1.25rem;
+            color: #475569;
+            font-size: 1.0625rem;
+        }
+        
+        .content ol, .content ul {
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+        }
+        
+        .content li {
+            margin-bottom: 0.75rem;
+            color: #475569;
+            line-height: 1.7;
+        }
+        
+        .content li strong {
+            color: #0f172a;
+        }
+        
+        pre {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+        
+        code {
+            background: #f1f5f9;
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.25rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #673DE6;
+        }
+        
+        .tip-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-left: 4px solid #10b981;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .tip-box strong {
+            color: #047857;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .warning-box strong {
+            color: #d97706;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-left: 4px solid #3b82f6;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .info-box strong {
+            color: #1d4ed8;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .sidebar {
+            position: sticky;
+            top: 6rem;
+            height: fit-content;
+        }
+        
+        .sidebar-section {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .sidebar-section h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+        
+        .sidebar-section ul {
+            list-style: none;
+        }
+        
+        .sidebar-section li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .sidebar-section a {
+            color: #673DE6;
+            text-decoration: none;
+            font-size: 0.9375rem;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            transition: all 0.2s;
+        }
+        
+        .sidebar-section a:hover {
+            background: #ede9fe;
+            color: #5B21B6;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #673DE6 0%, #5B21B6 100%);
+            color: white;
+            padding: 0.875rem 1.75rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 3rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(103, 61, 230, 0.3);
+        }
+        
+        .footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+        
+        .footer-links a:hover {
+            color: #EC1C65;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: static;
+            }
+            
+            h1 {
+                font-size: 1.875rem;
+            }
+            
+            .nav {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="/" class="logo">AXIOM<span>HOST</span></a>
+            <nav class="nav">
+                <a href="/pricing">Pricing</a>
+                <a href="/help">Help Center</a>
+                <a href="/dashboard">My Account</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="main-content">
+            <div class="breadcrumb">
+                <a href="/help">Help Center</a> / <a href="/help#email-setup">Email Setup</a> / Creating Professional Email
+            </div>
+
+            <article>
+                <div class="article-header">
+                    <span class="category-badge">Email Setup</span>
+                    <h1>Creating Professional Email with Your Domain</h1>
+                    <div class="article-meta">
+                        <span>📖 8 min read</span>
+                        <span>👁️ 18.3k views</span>
+                        <span>📅 Updated Dec 2025</span>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <p>Having a professional email address with your own domain name (like <code>info@yourdomain.com</code> instead of <code>yourname@gmail.com</code>) adds credibility to your business and helps build trust with customers. This comprehensive guide will show you how to create professional email accounts using cPanel.</p>
+
+                    <h2>Why Use Professional Email?</h2>
+                    <ul>
+                        <li><strong>Brand Credibility:</strong> Shows you're a legitimate business</li>
+                        <li><strong>Professional Image:</strong> Makes better impression than free email services</li>
+                        <li><strong>Custom Addresses:</strong> Create unlimited addresses like sales@, support@, info@</li>
+                        <li><strong>Better Control:</strong> Full ownership and control of your email data</li>
+                        <li><strong>Enhanced Security:</strong> Advanced spam filtering and virus protection included</li>
+                    </ul>
+
+                    <h2>Prerequisites</h2>
+                    <ul>
+                        <li>Active AxiomHost hosting account</li>
+                        <li>Domain name added to your hosting account</li>
+                        <li>cPanel login credentials</li>
+                    </ul>
+
+                    <h2>Step-by-Step: Creating Email Accounts</h2>
+
+                    <h3>Step 1: Access cPanel Email Accounts</h3>
+                    <ol>
+                        <li>Log into your cPanel at <code>yourdomain.com/cpanel</code></li>
+                        <li>Scroll down to the <strong>Email</strong> section</li>
+                        <li>Click on <strong>Email Accounts</strong></li>
+                    </ol>
+
+                    <h3>Step 2: Create a New Email Account</h3>
+                    <ol>
+                        <li>Click the <strong>+ Create</strong> button at the top right</li>
+                        <li>The email account creation form will appear</li>
+                    </ol>
+
+                    <h3>Step 3: Configure Email Account Details</h3>
+
+                    <h4>Username</h4>
+                    <p>Enter the part before the @ symbol. Common examples:</p>
+                    <ul>
+                        <li><code>info</code> - for general inquiries (info@yourdomain.com)</li>
+                        <li><code>support</code> - for customer support (support@yourdomain.com)</li>
+                        <li><code>sales</code> - for sales team (sales@yourdomain.com)</li>
+                        <li><code>your.name</code> - personal email (john.doe@yourdomain.com)</li>
+                    </ul>
+
+                    <div class="tip-box">
+                        <strong>💡 Pro Tip:</strong>
+                        Use descriptive email addresses that clearly indicate their purpose. This makes it easier for customers to know who they're contacting.
+                    </div>
+
+                    <h4>Domain</h4>
+                    <p>Select your domain from the dropdown menu. If you have multiple domains, make sure to select the correct one.</p>
+
+                    <h4>Password</h4>
+                    <p>Create a strong password for this email account:</p>
+                    <ul>
+                        <li>At least 12 characters long</li>
+                        <li>Mix of uppercase and lowercase letters</li>
+                        <li>Include numbers and special characters</li>
+                        <li>Avoid dictionary words or personal information</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <strong>⚠️ Security Warning:</strong>
+                        Never use the same password for multiple email accounts. Each account should have a unique, strong password to prevent unauthorized access.
+                    </div>
+
+                    <h4>Storage Space</h4>
+                    <p>Set the mailbox quota (storage limit). Options:</p>
+                    <ul>
+                        <li><strong>Unlimited:</strong> No storage restrictions (recommended for most users)</li>
+                        <li><strong>Custom Quota:</strong> Set specific MB limit (useful for managing disk space)</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <strong>📊 Recommended Settings:</strong>
+                        For most business users, set to "Unlimited" or at least 2000 MB (2 GB) to prevent mailbox full errors.
+                    </div>
+
+                    <h3>Step 4: Create the Email Account</h3>
+                    <ol>
+                        <li>Review all information for accuracy</li>
+                        <li>Click the <strong>+ Create</strong> button</li>
+                        <li>You'll see a success message confirming the account was created</li>
+                    </ol>
+
+                    <h2>Accessing Your Email</h2>
+
+                    <h3>Option 1: Webmail (Browser-Based)</h3>
+                    <p>Access your email from any browser without installing software:</p>
+                    <ol>
+                        <li>Navigate to <code>yourdomain.com/webmail</code></li>
+                        <li>Enter your full email address (e.g., info@yourdomain.com)</li>
+                        <li>Enter the password you created</li>
+                        <li>Click <strong>Log in</strong></li>
+                        <li>Choose between three webmail clients:
+                            <ul>
+                                <li><strong>Roundcube:</strong> Modern interface, recommended for most users</li>
+                                <li><strong>Horde:</strong> Feature-rich with calendar and tasks</li>
+                                <li><strong>SquirrelMail:</strong> Lightweight and simple</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <div class="tip-box">
+                        <strong>💡 Recommended:</strong>
+                        Use Roundcube for the best user experience. It has a modern interface similar to Gmail and includes all essential features.
+                    </div>
+
+                    <h3>Option 2: Email Client (Desktop/Mobile)</h3>
+                    <p>Configure your email on Outlook, Thunderbird, Apple Mail, or mobile devices.</p>
+
+                    <h4>Email Configuration Settings</h4>
+                    <p>You'll need these settings to configure your email client:</p>
+
+                    <pre><strong>Incoming Mail Server (IMAP - Recommended):</strong>
+Server: mail.yourdomain.com
+Port: 993
+Security: SSL/TLS
+Username: info@yourdomain.com
+Password: [your email password]
+
+<strong>Incoming Mail Server (POP3 - Alternative):</strong>
+Server: mail.yourdomain.com
+Port: 995
+Security: SSL/TLS
+Username: info@yourdomain.com
+Password: [your email password]
+
+<strong>Outgoing Mail Server (SMTP):</strong>
+Server: mail.yourdomain.com
+Port: 465 (SSL) or 587 (TLS)
+Security: SSL/TLS
+Authentication: Required
+Username: info@yourdomain.com
+Password: [your email password]</pre>
+
+                    <div class="info-box">
+                        <strong>📱 IMAP vs POP3:</strong>
+                        <strong>IMAP</strong> (recommended) keeps emails on the server and syncs across all devices. <strong>POP3</strong> downloads emails to one device and removes them from the server. Choose IMAP for multi-device access.
+                    </div>
+
+                    <h3>Option 3: Configure on iPhone/Android</h3>
+                    <p>See our detailed guide: <a href="/help-articles/configure-email-mobile.html">Configuring Email on iPhone and Android</a></p>
+
+                    <h2>Managing Email Accounts</h2>
+
+                    <h3>Changing Email Password</h3>
+                    <ol>
+                        <li>Go to <strong>Email Accounts</strong> in cPanel</li>
+                        <li>Find the email account you want to modify</li>
+                        <li>Click <strong>Manage</strong> next to the account</li>
+                        <li>Click <strong>Change Password</strong></li>
+                        <li>Enter new password and click <strong>Change Password</strong></li>
+                    </ol>
+
+                    <h3>Checking Disk Usage</h3>
+                    <ol>
+                        <li>In <strong>Email Accounts</strong>, view the usage bar next to each account</li>
+                        <li>Green = healthy usage</li>
+                        <li>Yellow/Red = approaching/exceeded quota</li>
+                        <li>Click <strong>Manage</strong> to see detailed usage statistics</li>
+                    </ol>
+
+                    <h3>Deleting Email Accounts</h3>
+                    <ol>
+                        <li>In <strong>Email Accounts</strong>, find the account to delete</li>
+                        <li>Click <strong>Delete</strong></li>
+                        <li>Confirm deletion (this action cannot be undone)</li>
+                    </ol>
+
+                    <div class="warning-box">
+                        <strong>⚠️ Warning:</strong>
+                        Deleting an email account permanently removes all emails, folders, and settings. Make sure to backup important emails before deletion.
+                    </div>
+
+                    <h2>Setting Up Email Forwarders</h2>
+                    <p>Email forwarders automatically redirect emails from one address to another.</p>
+
+                    <h3>Creating a Forwarder</h3>
+                    <ol>
+                        <li>In cPanel, go to <strong>Email</strong> section</li>
+                        <li>Click <strong>Forwarders</strong></li>
+                        <li>Click <strong>Add Forwarder</strong></li>
+                        <li>Enter the address to forward FROM (e.g., sales@yourdomain.com)</li>
+                        <li>Enter the address to forward TO (e.g., john@yourdomain.com or john@gmail.com)</li>
+                        <li>Click <strong>Add Forwarder</strong></li>
+                    </ol>
+
+                    <div class="tip-box">
+                        <strong>💡 Use Case Example:</strong>
+                        Forward contact@yourdomain.com to your personal Gmail to check messages on the go, while maintaining a professional email address for customers.
+                    </div>
+
+                    <h2>Configuring Auto-Responders</h2>
+                    <p>Auto-responders send automatic replies when you receive emails. Perfect for vacation messages or acknowledgment emails.</p>
+
+                    <h3>Setting Up Auto-Responder</h3>
+                    <ol>
+                        <li>In cPanel, go to <strong>Email</strong> section</li>
+                        <li>Click <strong>Auto Responders</strong></li>
+                        <li>Click <strong>Add Auto Responder</strong></li>
+                        <li>Select the email address</li>
+                        <li>Enter subject line (e.g., "Out of Office")</li>
+                        <li>Enter your message body</li>
+                        <li>Set start and stop dates (optional)</li>
+                        <li>Click <strong>Create/Modify</strong></li>
+                    </ol>
+
+                    <h2>Best Practices for Professional Email</h2>
+
+                    <h3>Security</h3>
+                    <ul>
+                        <li>Enable two-factor authentication (2FA) for cPanel</li>
+                        <li>Use strong, unique passwords for each email account</li>
+                        <li>Regularly update passwords (every 90 days recommended)</li>
+                        <li>Never share email passwords</li>
+                        <li>Be cautious of phishing emails</li>
+                    </ul>
+
+                    <h3>Organization</h3>
+                    <ul>
+                        <li>Create department-specific addresses (sales@, support@, billing@)</li>
+                        <li>Use email filters to automatically organize incoming mail</li>
+                        <li>Set up folders for different projects or clients</li>
+                        <li>Archive old emails regularly to save space</li>
+                    </ul>
+
+                    <h3>Deliverability</h3>
+                    <ul>
+                        <li>Configure SPF, DKIM, and DMARC records (see <a href="/help-articles/email-authentication.html">Email Authentication Guide</a>)</li>
+                        <li>Avoid sending mass emails without proper permission</li>
+                        <li>Keep your domain's reputation clean</li>
+                        <li>Monitor spam folder regularly</li>
+                    </ul>
+
+                    <h2>Troubleshooting Common Issues</h2>
+
+                    <h3>Can't Send or Receive Emails</h3>
+                    <p><strong>Solutions:</strong></p>
+                    <ul>
+                        <li>Verify email account credentials are correct</li>
+                        <li>Check mailbox isn't full (exceeding quota)</li>
+                        <li>Ensure domain DNS is properly configured</li>
+                        <li>Verify mail server settings in your email client</li>
+                        <li>Check if your IP is blacklisted</li>
+                    </ul>
+
+                    <h3>Emails Going to Spam</h3>
+                    <p><strong>Solutions:</strong></p>
+                    <ul>
+                        <li>Configure SPF, DKIM, and DMARC authentication</li>
+                        <li>Avoid spam trigger words in subject lines</li>
+                        <li>Don't send too many emails at once</li>
+                        <li>Ask recipients to add you to their contacts</li>
+                    </ul>
+
+                    <h3>Password Not Working</h3>
+                    <p><strong>Solutions:</strong></p>
+                    <ul>
+                        <li>Reset password from cPanel > Email Accounts</li>
+                        <li>Ensure you're using the full email address as username</li>
+                        <li>Check for typos (passwords are case-sensitive)</li>
+                        <li>Clear browser cache and cookies</li>
+                    </ul>
+
+                    <h2>Next Steps</h2>
+                    <p>Now that you have professional email set up:</p>
+                    <ul>
+                        <li><a href="/help-articles/configure-email-mobile.html">Configure email on your mobile devices</a></li>
+                        <li><a href="/help-articles/email-authentication.html">Set up SPF, DKIM, and DMARC for better deliverability</a></li>
+                        <li><a href="/help-articles/email-filters.html">Create email filters to organize incoming mail</a></li>
+                        <li><a href="/help-articles/email-security.html">Enhance email security settings</a></li>
+                    </ul>
+
+                    <div class="tip-box">
+                        <strong>💡 Need Assistance?</strong>
+                        Our 24/7 Nigerian-based support team is ready to help! Contact us via live chat, email at support@axiomhost.cloud, or call +234-701-934-3754.
+                    </div>
+
+                    <a href="/help" class="back-button">← Back to Help Center</a>
+                </div>
+            </article>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>Related Articles</h3>
+                <ul>
+                    <li><a href="/help-articles/configure-email-mobile.html">Configuring Email on iPhone and Android</a></li>
+                    <li><a href="/help-articles/email-authentication.html">Advanced Email Security (SPF, DKIM, DMARC)</a></li>
+                    <li><a href="/help-articles/email-filters.html">Managing Email Filters and Spam Protection</a></li>
+                    <li><a href="/help-articles/mailing-lists.html">Setting Up Mailing Lists</a></li>
+                    <li><a href="/help-articles/email-troubleshooting.html">Email Troubleshooting Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Popular Topics</h3>
+                <ul>
+                    <li><a href="/help-articles/install-wordpress.html">Installing WordPress</a></li>
+                    <li><a href="/help-articles/install-ssl-certificate.html">Installing SSL Certificate</a></li>
+                    <li><a href="/help-articles/cpanel-first-website.html">Setting Up Your First Website</a></li>
+                    <li><a href="/help-articles/domain-setup.html">Domain Setup Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Get Support</h3>
+                <ul>
+                    <li><a href="/contact">Contact Support Team</a></li>
+                    <li><a href="/tutorials">Video Tutorials</a></li>
+                    <li><a href="/faq">Frequently Asked Questions</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/about">About Us</a>
+                <a href="/contact">Contact</a>
+            </div>
+            <p>&copy; 2025 AxiomHost. All rights reserved. Powered by renewable energy.</p>
+        </div>
+    </footer>
+</body>
+</html>

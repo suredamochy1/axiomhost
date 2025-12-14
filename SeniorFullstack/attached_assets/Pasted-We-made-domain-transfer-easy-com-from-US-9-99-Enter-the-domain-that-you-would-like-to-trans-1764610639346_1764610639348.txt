@@ -1,0 +1,152 @@
+We made domain transfer easy
+.com from
+
+US$ 
+9.99
+Enter the domain that you would like to transfer to Hostinger
+
+Enter the domain you want to transfer
+
+Transfer
+Looking for a new domain name?Try domain checker
+Transfer a domain name in 4 simple steps:
+Enter the domain name you want to transfer
+Simply enter your domain name and click on transfer.
+Prepare domain for transfer
+Unlock the domain you want to transfer at your current registrar.
+Proceed with the purchase
+Enter the EPP code or domain transfer authorization code and confirm transfer.
+Confirm domain transfer email
+You will receive a confirmation letter from your domain registry.
+Confirm domain transfer email
+Why transfer domains to Hostinger?
+No time lost
+No time lost
+Most domain transfers include a 1 year renewal to your domain's current expiration date.
+
+Easy domain management
+Easy domain management
+Hostinger offers a wide variety of tools to satisfy advanced user and website developer needs, all in one place.
+
+Free privacy protection
+Free privacy protection
+Free WHOIS privacy protection is included with every eligible domain registration.
+
+Check our domain transfer prices
+Domains
+Transfer / renewal price
+.com
+US$ 
+9.99
+Renewal price 
+US$ 
+19.99
+/year
+
+.fr
+US$ 
+7.99
+Renewal price 
+US$ 
+12.99
+/year
+
+.in
+US$ 
+6.99
+Renewal price 
+US$ 
+9.99
+/year
+
+.org
+US$ 
+12.99
+Renewal price 
+US$ 
+15.99
+/year
+
+.nl
+US$ 
+0.99
+Renewal price 
+US$ 
+9.99
+/year
+
+.net
+US$ 
+14.99
+Renewal price 
+US$ 
+17.99
+/year
+
+.lt
+US$ 
+10.99
+Renewal price 
+US$ 
+11.99
+/year
+
+.es
+US$ 
+0.99
+Renewal price 
+US$ 
+9.99
+/year
+
+.de
+US$ 
+4.99
+Renewal price 
+US$ 
+13.99
+/year
+
+.eu
+US$ 
+6.99
+Renewal price 
+US$ 
+7.99
+/year
+
+To ensure a successful domain transfer
+Make sure it has been more than 60 days since the domain registration or last transfer.
+Check your domain status, it should not be in Pending Delete or Redemption status.
+Make sure you have access to the domain’s EPP code. Learn more about EPP
+Your WHOIS privacy protection should be disabled before the transfer process.
+To ensure a successful domain transfer
+Domain transfer FAQs
+What is a domain name transfer?
+A domain name transfer means moving your domain registration from your current registrar to Hostinger. Doing so simply shifts who manages your domain settings and renewals – your website, email, and ownership details remain unchanged.
+
+Why should I transfer my domain to Hostinger?
+Transferring your domain to Hostinger allows you to manage your hosting and domains from a single user-friendly dashboard. Our competitive pricing ensures transparent rates and lower renewal fees, so there are no surprises. Plus, with 24/7 expert support, you’ll have help whenever you need it.
+
+How do I transfer a domain?
+First, check if you’re eligible to initiate a domain transfer. In most cases, domains should have been registered for at least 60 days before you can move them to a new registrar.
+
+If you are, unlock the domain you want to transfer from your current registrar’s dashboard, and get the authorization code (also known as the EPP or transfer code). Then, enter your domain name in the provided field on our domain transfer page, follow the on-screen steps, and provide the authorization code to begin the transfer. For more detailed instructions, read our support article on how to transfer a domain to Hostinger.
+
+Note that you may need to verify the transfer request after it’s reviewed by the registrar, so be sure to check your email.
+
+How long will it take to transfer a domain to Hostinger?
+Transferring a domain to Hostinger takes up to seven days. It can be faster if your current registrar releases the domain quickly and you promptly confirm the transfer request in your email. Some domain registries are also quick to process a domain transfer, but that will depend on the domain extension you’re transferring.
+
+Worry not, your website and email will work normally while we handle the transfer process in the background.
+
+Can I transfer a domain for free?
+No, domain transfers aren’t free. This process involves multiple parties, including the Internet Corporation for Assigned Names and Numbers (ICANN) and various domain registries, which influence the overall cost.
+
+The price you pay for a domain transfer depends on the domain extension you choose, as each registry sets its own base pricing. For most generic top-level domains (gTLDs) like .com, .net, or .org, the transfer fee usually includes a one-year renewal of your domain registration.
+
+Can I use a domain name without hosting?
+Yes, you can use a domain name without hosting. A typical use case is creating professional email addresses (like you@businessname.com) and redirecting the domain to an existing website, such as a social media page. You can also reserve the domain for future use through domain parking. If you’re building a business, this is a good way to protect your brand by preventing others from claiming the name before you do.
+
+Hostinger
+Transfer domain

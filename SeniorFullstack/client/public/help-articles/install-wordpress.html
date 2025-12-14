@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Install WordPress on Your Hosting Account - AxiomHost Help Center</title>
+    <meta name="description" content="Step-by-step guide to installing WordPress on your AxiomHost account using the one-click installer in cPanel. Perfect for beginners.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: #ffffff;
+        }
+        
+        .header {
+            background: #000000;
+            border-bottom: 1px solid #1e293b;
+            padding: 1.25rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #EC1C65;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav a:hover {
+            color: #EC1C65;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3rem;
+        }
+        
+        .main-content {
+            min-width: 0;
+        }
+        
+        .breadcrumb {
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .breadcrumb a {
+            color: #673DE6;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .article-header {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .category-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #673DE6 0%, #EC1C65 100%);
+            color: white;
+            padding: 0.375rem 0.875rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .article-meta {
+            display: flex;
+            gap: 2rem;
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+        
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .content h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .content p {
+            margin-bottom: 1.25rem;
+            color: #475569;
+            font-size: 1.0625rem;
+        }
+        
+        .content ol, .content ul {
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+        }
+        
+        .content li {
+            margin-bottom: 0.75rem;
+            color: #475569;
+            line-height: 1.7;
+        }
+        
+        .content li strong {
+            color: #0f172a;
+        }
+        
+        pre {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+        
+        .tip-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-left: 4px solid #10b981;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .tip-box strong {
+            color: #047857;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .warning-box strong {
+            color: #d97706;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .sidebar {
+            position: sticky;
+            top: 6rem;
+            height: fit-content;
+        }
+        
+        .sidebar-section {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .sidebar-section h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+        
+        .sidebar-section ul {
+            list-style: none;
+        }
+        
+        .sidebar-section li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .sidebar-section a {
+            color: #673DE6;
+            text-decoration: none;
+            font-size: 0.9375rem;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            transition: all 0.2s;
+        }
+        
+        .sidebar-section a:hover {
+            background: #ede9fe;
+            color: #5B21B6;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #673DE6 0%, #5B21B6 100%);
+            color: white;
+            padding: 0.875rem 1.75rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 3rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(103, 61, 230, 0.3);
+        }
+        
+        .footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+        
+        .footer-links a:hover {
+            color: #EC1C65;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: static;
+            }
+            
+            h1 {
+                font-size: 1.875rem;
+            }
+            
+            .nav {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="/" class="logo">AXIOM<span>HOST</span></a>
+            <nav class="nav">
+                <a href="/pricing">Pricing</a>
+                <a href="/help">Help Center</a>
+                <a href="/dashboard">My Account</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="main-content">
+            <div class="breadcrumb">
+                <a href="/help">Help Center</a> / <a href="/help#getting-started">Getting Started</a> / How to Install WordPress
+            </div>
+
+            <article>
+                <div class="article-header">
+                    <span class="category-badge">Getting Started</span>
+                    <h1>How to Install WordPress on Your Hosting Account</h1>
+                    <div class="article-meta">
+                        <span>📖 5 min read</span>
+                        <span>👁️ 12.5k views</span>
+                        <span>📅 Updated Dec 2025</span>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <p>WordPress is the world's most popular content management system (CMS), powering over 40% of all websites. Installing WordPress on your AxiomHost account is incredibly easy using our one-click installer. This guide will walk you through the entire process step-by-step.</p>
+
+                    <h2>Prerequisites</h2>
+                    <ul>
+                        <li>An active AxiomHost hosting account</li>
+                        <li>cPanel login credentials (sent to your email after signup)</li>
+                        <li>A domain name pointed to your hosting account</li>
+                    </ul>
+
+                    <h2>Step-by-Step Installation Guide</h2>
+
+                    <h3>Step 1: Log into cPanel</h3>
+                    <ol>
+                        <li>Navigate to <strong>yourdomain.com/cpanel</strong> or use the cPanel link from your welcome email</li>
+                        <li>Enter your cPanel username and password</li>
+                        <li>Click <strong>Log in</strong></li>
+                    </ol>
+
+                    <div class="tip-box">
+                        <strong>💡 Tip:</strong>
+                        You can also access cPanel directly from your AxiomHost client area by clicking "Login to cPanel" next to your hosting service.
+                    </div>
+
+                    <h3>Step 2: Find Softaculous Apps Installer</h3>
+                    <ol>
+                        <li>Once logged into cPanel, scroll down to the <strong>Software</strong> section</li>
+                        <li>Click on <strong>Softaculous Apps Installer</strong></li>
+                        <li>In the Softaculous interface, you'll see WordPress under "Top Scripts" or use the search bar</li>
+                    </ol>
+
+                    <h3>Step 3: Start WordPress Installation</h3>
+                    <ol>
+                        <li>Click on the <strong>WordPress</strong> icon</li>
+                        <li>Click the <strong>Install Now</strong> button</li>
+                        <li>You'll be taken to the WordPress installation configuration page</li>
+                    </ol>
+
+                    <h3>Step 4: Configure Installation Settings</h3>
+                    <p>Fill in the following information carefully:</p>
+
+                    <h4>Software Setup</h4>
+                    <ul>
+                        <li><strong>Choose Protocol:</strong> Select <code>https://</code> (if you have SSL installed) or <code>http://</code></li>
+                        <li><strong>Choose Domain:</strong> Select the domain where you want to install WordPress</li>
+                        <li><strong>In Directory:</strong> Leave blank to install in the root (yourdomain.com) or enter a folder name (e.g., "blog" for yourdomain.com/blog)</li>
+                    </ul>
+
+                    <div class="tip-box">
+                        <strong>💡 Recommended:</strong>
+                        Leave "In Directory" blank if you want WordPress to be your main website. This makes your site accessible at yourdomain.com instead of yourdomain.com/folder.
+                    </div>
+
+                    <h4>Site Settings</h4>
+                    <ul>
+                        <li><strong>Site Name:</strong> Enter your website name (e.g., "My Awesome Blog")</li>
+                        <li><strong>Site Description:</strong> Enter a brief tagline (e.g., "Thoughts, stories and ideas")</li>
+                    </ul>
+
+                    <h4>Admin Account</h4>
+                    <ul>
+                        <li><strong>Admin Username:</strong> Choose a username (avoid "admin" for security)</li>
+                        <li><strong>Admin Password:</strong> Create a strong password</li>
+                        <li><strong>Admin Email:</strong> Enter your email address for notifications</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <strong>⚠️ Important Security Note:</strong>
+                        Never use "admin" as your username. Choose a unique username and create a strong password with uppercase, lowercase, numbers, and special characters.
+                    </div>
+
+                    <h4>Choose Language and Advanced Options</h4>
+                    <ul>
+                        <li><strong>Language:</strong> Select your preferred language (English by default)</li>
+                        <li><strong>Advanced Options:</strong> You can leave these as default for now</li>
+                    </ul>
+
+                    <h3>Step 5: Complete Installation</h3>
+                    <ol>
+                        <li>Scroll down and click the <strong>Install</strong> button</li>
+                        <li>Wait while Softaculous installs WordPress (usually takes 1-2 minutes)</li>
+                        <li>Once complete, you'll see a success message with your site URL and admin panel URL</li>
+                    </ol>
+
+                    <h3>Step 6: Access Your WordPress Site</h3>
+                    <p>After installation, you'll receive two important URLs:</p>
+                    <pre>Website URL: https://yourdomain.com
+Admin Panel: https://yourdomain.com/wp-admin</pre>
+
+                    <ol>
+                        <li>Visit your admin panel at <code>https://yourdomain.com/wp-admin</code></li>
+                        <li>Enter the username and password you created during installation</li>
+                        <li>Click <strong>Log In</strong> to access your WordPress dashboard</li>
+                    </ol>
+
+                    <h2>What to Do After Installation</h2>
+
+                    <h3>1. Install an SSL Certificate (If Not Done)</h3>
+                    <p>Secure your website with a free SSL certificate to enable HTTPS. Visit our guide: <a href="/help-articles/install-ssl-certificate.html">How to Install SSL Certificate</a></p>
+
+                    <h3>2. Choose a Theme</h3>
+                    <ol>
+                        <li>In your WordPress dashboard, go to <strong>Appearance > Themes</strong></li>
+                        <li>Click <strong>Add New</strong> to browse thousands of free themes</li>
+                        <li>Click <strong>Install</strong> and then <strong>Activate</strong> your chosen theme</li>
+                    </ol>
+
+                    <h3>3. Install Essential Plugins</h3>
+                    <p>Recommended plugins for every WordPress site:</p>
+                    <ul>
+                        <li><strong>Yoast SEO:</strong> For search engine optimization</li>
+                        <li><strong>Wordfence Security:</strong> For website security</li>
+                        <li><strong>UpdraftPlus:</strong> For automatic backups</li>
+                        <li><strong>WP Super Cache:</strong> For performance optimization</li>
+                        <li><strong>Contact Form 7:</strong> For contact forms</li>
+                    </ul>
+
+                    <h3>4. Configure Permalinks</h3>
+                    <ol>
+                        <li>Go to <strong>Settings > Permalinks</strong></li>
+                        <li>Select <strong>Post name</strong> for SEO-friendly URLs</li>
+                        <li>Click <strong>Save Changes</strong></li>
+                    </ol>
+
+                    <h3>5. Create Your First Pages</h3>
+                    <ol>
+                        <li>Go to <strong>Pages > Add New</strong></li>
+                        <li>Create essential pages: Home, About, Contact, Privacy Policy</li>
+                        <li>Set your homepage: Go to <strong>Settings > Reading</strong> and select "A static page"</li>
+                    </ol>
+
+                    <h2>Troubleshooting Common Issues</h2>
+
+                    <h3>Issue: "Directory Already Exists"</h3>
+                    <p><strong>Solution:</strong> The installation directory is not empty. Either choose a different directory or delete the existing files via File Manager in cPanel.</p>
+
+                    <h3>Issue: Can't Access wp-admin</h3>
+                    <p><strong>Solution:</strong> Clear your browser cache and cookies. If the problem persists, check if your domain is properly pointed to your hosting account.</p>
+
+                    <h3>Issue: Installation Taking Too Long</h3>
+                    <p><strong>Solution:</strong> Wait for at least 5 minutes. If it still doesn't complete, contact AxiomHost support through live chat for assistance.</p>
+
+                    <h2>Best Practices for WordPress Security</h2>
+                    <ul>
+                        <li>Keep WordPress core, themes, and plugins updated regularly</li>
+                        <li>Use strong, unique passwords for all accounts</li>
+                        <li>Install a security plugin like Wordfence or Sucuri</li>
+                        <li>Enable two-factor authentication (2FA)</li>
+                        <li>Regular backups using UpdraftPlus or JetBackup</li>
+                        <li>Limit login attempts to prevent brute force attacks</li>
+                        <li>Use SSL certificate for HTTPS encryption</li>
+                    </ul>
+
+                    <h2>Next Steps</h2>
+                    <p>Now that WordPress is installed, you can:</p>
+                    <ul>
+                        <li>Customize your site appearance with themes and page builders</li>
+                        <li>Add functionality with plugins from the WordPress repository</li>
+                        <li>Create blog posts and pages with the block editor</li>
+                        <li>Set up email accounts for your domain</li>
+                        <li>Optimize your site for search engines (SEO)</li>
+                        <li>Connect Google Analytics to track visitors</li>
+                    </ul>
+
+                    <div class="tip-box">
+                        <strong>💡 Need Help?</strong>
+                        Our Nigerian-based support team is available 24/7 via live chat, email, or phone at +234-701-934-3754. We're here to help you succeed!
+                    </div>
+
+                    <a href="/help" class="back-button">← Back to Help Center</a>
+                </div>
+            </article>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>Related Articles</h3>
+                <ul>
+                    <li><a href="/help-articles/cpanel-first-website.html">Setting Up Your First Website with cPanel</a></li>
+                    <li><a href="/help-articles/install-ssl-certificate.html">Installing Free SSL Certificate</a></li>
+                    <li><a href="/help-articles/create-email-account.html">Creating Professional Email with Your Domain</a></li>
+                    <li><a href="/help-articles/wordpress-security.html">WordPress Security Hardening Guide</a></li>
+                    <li><a href="/help-articles/wordpress-seo-optimization.html">WordPress SEO Optimization</a></li>
+                    <li><a href="/help-articles/backup-website.html">Backing Up Your WordPress Website</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Popular Topics</h3>
+                <ul>
+                    <li><a href="/help-articles/domain-setup.html">Domain Registration & Setup</a></li>
+                    <li><a href="/help-articles/email-configuration.html">Email Configuration Guide</a></li>
+                    <li><a href="/help-articles/website-migration.html">Website Migration Guide</a></li>
+                    <li><a href="/help-articles/performance-optimization.html">Website Performance Optimization</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Get Support</h3>
+                <ul>
+                    <li><a href="/contact">Contact Support Team</a></li>
+                    <li><a href="/tutorials">Video Tutorials</a></li>
+                    <li><a href="/faq">Frequently Asked Questions</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/about">About Us</a>
+                <a href="/contact">Contact</a>
+            </div>
+            <p>&copy; 2025 AxiomHost. All rights reserved. Powered by renewable energy.</p>
+        </div>
+    </footer>
+</body>
+</html>
