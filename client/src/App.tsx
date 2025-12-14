@@ -54,6 +54,10 @@ import WebHostingGuide from "@/pages/WebHostingGuide";
 import SecurityGuide from "@/pages/SecurityGuide";
 import SEOGuide from "@/pages/SEOGuide";
 import CpanelGuide from "@/pages/CpanelGuide";
+import WordPressGuide from "@/pages/WordPressGuide";
+import BackupsGuide from "@/pages/BackupsGuide";
+import DNSGuide from "@/pages/DNSGuide";
+import DomainEmailGuide from "@/pages/DomainEmailGuide";
 
 function Router() {
   return (
@@ -98,6 +102,10 @@ function Router() {
       <Route path="/security-guide" component={SecurityGuide} />
       <Route path="/seo-guide" component={SEOGuide} />
       <Route path="/cpanel-guide" component={CpanelGuide} />
+      <Route path="/wordpress-guide" component={WordPressGuide} />
+      <Route path="/backups-guide" component={BackupsGuide} />
+      <Route path="/dns-guide" component={DNSGuide} />
+      <Route path="/domain-email-guide" component={DomainEmailGuide} />
       <Route path="/kb/:slug" component={KnowledgeBase} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
